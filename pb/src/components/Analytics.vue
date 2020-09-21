@@ -52,12 +52,18 @@
             </div>
         </aside>
         <div class="main">
-            <div class="one">Доля бренда в категории</div>
-            <div class="two">Представлено в магазинах</div>
-            <div class="three">Наличие в магазинах</div>
-            <div class="four">Количество раз в стопе</div>
+            <div class="one">
+                <div class="one-content"><span>151</span></div>
+                <span class="one label">Количество брендов</span>
+            </div>
+            <div class="two">Наличие товаров</div>
+            <div class="three">Наличие товаров в магазинах</div>
+            <div class="four">Сравнение ср цены</div>
+            <div class="five">Количество категорий</div>
+            <div class="six">Представлено в магазинах</div>
+            <div class="seven">Вкладки</div>
         </div>
-
+    
     </div>
 </template>
 
@@ -85,21 +91,43 @@ aside {
 .one {
     grid-area: one;
     background-color: #ffffff;
+    height: 140px;
 }
 
 .two {
     grid-area: two;
     background-color: #ffffff;
+    height: 140px;
 }
 
 .three {
     grid-area: three;
     background-color: #ffffff;
+    height: 290px;
 }
 
 .four {
     grid-area: four;
     background-color: #ffffff;
+    height: 290px;
+}
+
+.five {
+    grid-area: five;
+    background-color: #ffffff;
+    height: 140px;
+}
+
+.six {
+    grid-area: six;
+    background-color: #ffffff;
+    height: 140px;
+}
+
+.seven {
+    grid-area: seven;
+    background-color: #ffffff;
+    height: 65px;
 }
 
 .main {
@@ -107,12 +135,13 @@ aside {
     font-size: 14px;
     font-weight: bold;
     display: grid;
-    grid-template-columns: 250px 250px 450px;
+    grid-template-columns: 150px 150px 200px 450px;
     grid-template-areas: 
-        "one two three"
-        "one four three"; 
+        "one two three four"
+        "five six three four"
+        "seven seven seven seven"; 
     grid-gap: 10px;
-    height: 290px;
+    height: 365px;
 }
 
 .select {
@@ -141,5 +170,20 @@ aside {
 .select-list {
     width: 98%;
     height: 25px;
+}
+
+.one-content {
+    margin: 25% auto;
+    font-size: 36px;
+    font-weight: bold;
+    justify-content: center;
+    color: blue;
+}
+
+.label {
+    font-size: 12px;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
 }
 </style>
