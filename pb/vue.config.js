@@ -1,12 +1,11 @@
 module.exports = {
   devServer: {
+    // proxy: 'https://api.cldcnt.ru',  // alternative
     proxy: {
-      "^/api": {
-        target: "http://localhost:4000",
-        changeOrigin: true,
-        logLevel: "debug",
-        pathRewrite: { "^/api": "/" }
-      }
-    }
-  }
+      '^/api': {
+        target: 'https://api.cldcnt.ru',
+        pathRewrite: { '^/api': '' },
+      },
+    },
+  },
 };
